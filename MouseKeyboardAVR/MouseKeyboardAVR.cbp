@@ -23,8 +23,12 @@
 				<Option type="5" />
 				<Option compiler="avr-gcc" />
 				<Compiler>
+					<Add option="-fexpensive-optimizations" />
 					<Add option="-Os" />
 				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
 			</Target>
 			<Environment>
 				<Variable name="MCU" value="at43usb320" />
@@ -32,11 +36,15 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add option="-mmcu=atmega328p" />
 			<Add option="-DF_CPU=16000000UL" />
+			<Add directory="/home/hschmale/ArduinoLib" />
 		</Compiler>
 		<Linker>
-			<Add option="-mmcu=at43usb320" />
+			<Add option="-mmcu=atmega328p" />
 			<Add option="-Wl,-Map=$(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).map,--cref" />
+			<Add library="/home/hschmale/ArduinoLib/core.a" />
+			<Add directory="/home/hschmale/ArduinoLib" />
 		</Linker>
 		<ExtraCommands>
 			<Add after="avr-objdump -h -S $(TARGET_OUTPUT_FILE) &gt; $(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).lss" />
@@ -45,7 +53,7 @@
 			<Add after="avr-objcopy --no-change-warnings -j .lock --change-section-lma .lock=0 -O ihex $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).lock" />
 			<Add after="avr-objcopy --no-change-warnings -j .signature --change-section-lma .signature=0 -O ihex $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).sig" />
 		</ExtraCommands>
-		<Unit filename="main.c">
+		<Unit filename="main.cpp">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Extensions>
