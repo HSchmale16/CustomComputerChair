@@ -1,6 +1,16 @@
-# compiler generated files
-*.hex
-*.lib
+# GitIgnore For ArduinoMouseKeyboard
+# \author Henry J Schmale
 
-*bin/*
-*obj/*
+# compiler generated files
+*.eep
+*.elf
+*.hex
+*.lock
+*.lss
+*.map
+*.sig
+*.o
+
+# code::blocks
+*.depend
+*.layout
