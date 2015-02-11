@@ -1,3 +1,6 @@
 # compiler generated files
 *.hex
 *.lib
+
+*bin/*
+*obj/*
