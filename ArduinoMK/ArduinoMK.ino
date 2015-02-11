@@ -10,19 +10,18 @@
  *    * 2-axis Joystick Pot with Select
  *        * x-axis is on A0
  *        * y-axis is on A1
- *        * Select is on interupt 0, Pin 3 on Leonardo, Pin 2 on Uno
+ *        * Select is on interupt 0, Digital Pin 2 on Uno
  *    * 7 Momementary Closed SPST Push Button Switches
- *    * Control Input SPST is on Interupt 1, Pin 2 Leonardo, Pin 3 Uno
+ *    * Control Input SPST is on Interupt 1, Digital Pin 3 Uno
  */
 
-// This is the board that we are currently targeting, UNO or LEONARDO
-#define UNO
-#ifdef UNO // if uno is targeted
-
-#endif
-#ifdef LEONARDO // if the leonardo is targeted
-
-#endif
+// Declare Constants
+const int MODKEY_0 = 4;  //!< Modifier Key 1
+const int MODKEY_1 = 5;
+const int PRIMKEY_0 = 6; //!< Primary Input Key 0
+const int PRIMKEY_1 = 7;
+const int PRIMKEY_2 = 8;
+const int PRIMKEY_3 = 9;
 
 volatile bool keyboardActive = false;
 
