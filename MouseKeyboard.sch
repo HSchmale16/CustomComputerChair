@@ -44,17 +44,6 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L ATmega32U4 U?
-U 1 1 54DAA5C7
-P 2550 3700
-F 0 "U?" H 1650 5400 60  0000 C CNN
-F 1 "ATmega32U4" H 1900 2150 60  0000 C CNN
-F 2 "" H 3750 4800 60  0000 C CNN
-F 3 "" H 3750 4800 60  0000 C CNN
-	1    2550 3700
-	1    0    0    -1  
-$EndComp
-$Comp
 L SW_PUSH SW?
 U 1 1 54DAA625
 P 8300 1750
@@ -211,4 +200,29 @@ Wire Wire Line
 Wire Wire Line
 	4700 6400 5850 6400
 Connection ~ 5850 6400
+Wire Wire Line
+	8600 1750 8650 1750
+Wire Wire Line
+	8650 1250 8650 4300
+Wire Wire Line
+	8650 2050 8600 2050
+Connection ~ 8650 1750
+Wire Wire Line
+	8650 2350 8600 2350
+Connection ~ 8650 2050
+Wire Wire Line
+	8650 2700 8600 2700
+Connection ~ 8650 2350
+Wire Wire Line
+	8650 3000 8600 3000
+Connection ~ 8650 2700
+Connection ~ 8650 3000
+Wire Wire Line
+	8650 3350 8600 3350
+Wire Wire Line
+	8650 3650 8600 3650
+Connection ~ 8650 3350
+Wire Wire Line
+	8650 4300 8600 4300
+Connection ~ 8650 3650
 $EndSCHEMATC
