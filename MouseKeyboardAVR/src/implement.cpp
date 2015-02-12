@@ -5,7 +5,7 @@
 
 #include "../include/implement.h" //!< This contains prototypes
 #include "../include/constants.h" //!< Various Constants
-#include <Arduino.h>              //!< Nice Library, Easy to u
+#include <Arduino.h>              //!< Nice Library, Easy to use
 
 int km::initKM()
 {
