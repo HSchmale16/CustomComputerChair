@@ -188,18 +188,14 @@ F 3 "" H 5850 6750 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3250 6550 4200 6550
-Wire Wire Line
-	4200 6550 5350 6550
+	3250 6550 5350 6550
 Wire Wire Line
 	4200 6550 4200 5850
 Wire Wire Line
 	5350 6550 5350 5850
 Connection ~ 4200 6550
 Wire Wire Line
-	5850 6750 5850 6400
-Wire Wire Line
-	5850 6400 5850 5850
+	5850 5850 5850 6750
 Wire Wire Line
 	4700 5850 4700 6400
 Wire Wire Line
@@ -208,21 +204,7 @@ Connection ~ 5850 6400
 Wire Wire Line
 	8600 1750 8650 1750
 Wire Wire Line
-	8650 1250 8650 1750
-Wire Wire Line
-	8650 1750 8650 2050
-Wire Wire Line
-	8650 2050 8650 2350
-Wire Wire Line
-	8650 2350 8650 2700
-Wire Wire Line
-	8650 2700 8650 3000
-Wire Wire Line
-	8650 3000 8650 3350
-Wire Wire Line
-	8650 3350 8650 3650
-Wire Wire Line
-	8650 3650 8650 4300
+	8650 1250 8650 4300
 Wire Wire Line
 	8650 2050 8600 2050
 Connection ~ 8650 1750
@@ -268,4 +250,12 @@ F 3 "" H 5450 1200 60  0000 C CNN
 	1    5450 1200
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	4450 5700 4450 3250
+Wire Wire Line
+	4450 3250 3500 3250
+Wire Wire Line
+	5600 5700 5600 3350
+Wire Wire Line
+	5600 3350 3500 3350
 $EndSCHEMATC
