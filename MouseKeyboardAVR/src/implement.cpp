@@ -6,3 +6,8 @@
 #include "../include/implement.h" //!< This contains prototypes
 #include "../include/constants.h" //!< Various Constants
 #include <Arduino.h>              //!< Nice Library, Easy to u
+
+int km::initKM()
+{
+    return 0;
+}
