@@ -15,6 +15,8 @@ namespace km
  * \return 0 on success, anything else on FAIL.
  */
 int initKM();
+
+int runKM();
 }
 
 #endif // IMPLEMENT_H_INCLUDED
