@@ -15,3 +15,6 @@
 *.depend
 *.layout
 *.html
+
+# Doxygen, Read the code if you want to know how this works
+MouseKeyboardAVR/doxygen/*
