@@ -1,5 +1,5 @@
-update=Fri 13 Feb 2015 10:21:47 AM EST
-last_client=eeschema
+update=Fri 13 Feb 2015 03:26:18 PM EST
+last_client=kicad
 [eeschema]
 version=1
 PageLayoutDescrFile=
@@ -42,3 +42,5 @@ LibName27=opto
 LibName28=atmel
 LibName29=contrib
 LibName30=valves
+[general]
+version=1

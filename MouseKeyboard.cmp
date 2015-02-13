@@ -1,0 +1,115 @@
+Cmp-Mod V01 Created by CvPcb (2014-jan-25)-product date = Fri 13 Feb 2015 03:26:10 PM EST
+
+BeginCmp
+TimeStamp = /54DD5892;
+Reference = D1;
+ValeurCmp = DIODESCH;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /54DD58BD;
+Reference = D2;
+ValeurCmp = DIODESCH;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /54DAB305;
+Reference = IC1;
+ValeurCmp = ATMEGA328P-P;
+IdModule  = Sockets_DIP:DIP-28__300;
+EndCmp
+
+BeginCmp
+TimeStamp = /54DD5132;
+Reference = J1;
+ValeurCmp = USB;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /54DD5770;
+Reference = R1;
+ValeurCmp = 2K2;
+IdModule  = Discret:R1;
+EndCmp
+
+BeginCmp
+TimeStamp = /54DD5615;
+Reference = R2;
+ValeurCmp = 68R;
+IdModule  = Discret:R1;
+EndCmp
+
+BeginCmp
+TimeStamp = /54DD55FC;
+Reference = R3;
+ValeurCmp = 68R;
+IdModule  = Discret:R1;
+EndCmp
+
+BeginCmp
+TimeStamp = /54DAA84B;
+Reference = RV1;
+ValeurCmp = POT;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /54DAA85F;
+Reference = RV2;
+ValeurCmp = POT;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /54DAA625;
+Reference = SW1;
+ValeurCmp = SW_PUSH;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /54DAA6B1;
+Reference = SW2;
+ValeurCmp = SW_PUSH;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /54DAA639;
+Reference = SW3;
+ValeurCmp = SW_PUSH;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /54DAA64D;
+Reference = SW4;
+ValeurCmp = SW_PUSH;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /54DAA661;
+Reference = SW5;
+ValeurCmp = SW_PUSH;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /54DAA675;
+Reference = SW6;
+ValeurCmp = SW_PUSH;
+IdModule  = ;
+EndCmp
+
+BeginCmp
+TimeStamp = /54DAA69D;
+Reference = SW7;
+ValeurCmp = SW_PUSH;
+IdModule  = ;
+EndCmp
+
+EndListe
