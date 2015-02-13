@@ -53,12 +53,33 @@
 			<Add after="avr-objcopy --no-change-warnings -j .lock --change-section-lma .lock=0 -O ihex $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).lock" />
 			<Add after="avr-objcopy --no-change-warnings -j .signature --change-section-lma .signature=0 -O ihex $(TARGET_OUTPUT_FILE) $(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).sig" />
 		</ExtraCommands>
+		<Unit filename="include/ProTrinketHidCombo.h" />
+		<Unit filename="include/ProTrinketHidComboC.h" />
 		<Unit filename="include/constants.h" />
 		<Unit filename="include/implement.h" />
+		<Unit filename="include/usbconfig.h" />
 		<Unit filename="main.cpp">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="src/ProTrinketHidCombo.cpp" />
+		<Unit filename="src/ProTrinketHidComboC.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="src/implement.cpp" />
+		<Unit filename="usbdrv/oddebug.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="usbdrv/oddebug.h" />
+		<Unit filename="usbdrv/usbdrv.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="usbdrv/usbdrv.h" />
+		<Unit filename="usbdrv/usbdrvasm.S" />
+		<Unit filename="usbdrv/usbdrvasm.asm">
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="usbdrv/usbportability.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

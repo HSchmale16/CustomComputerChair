@@ -1,11 +1,13 @@
-update=Fri 13 Feb 2015 03:26:18 PM EST
-last_client=kicad
+update=Fri 13 Feb 2015 05:58:19 PM EST
+last_client=eeschema
+[general]
+version=1
 [eeschema]
 version=1
 PageLayoutDescrFile=
 SubpartIdSeparator=0
 SubpartFirstId=65
-LibDir=
+LibDir=/home/hschmale/KiCad/LibMods-3rdParty
 NetFmtName=
 RptD_X=0
 RptD_Y=100
@@ -42,5 +44,6 @@ LibName27=opto
 LibName28=atmel
 LibName29=contrib
 LibName30=valves
-[general]
-version=1
+LibName31=arduino_shieldsNCL
+LibName32=con-usb-2
+LibName33=2axispotwselect
