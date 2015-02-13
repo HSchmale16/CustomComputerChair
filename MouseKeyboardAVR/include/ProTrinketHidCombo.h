@@ -1,26 +1,19 @@
 /*
-This is the part of the TrinketHidCombo code that is exposed to the user
+This is the part of the ProTrinketHidCombo code that is exposed to the user
 
-Copyright (c) 2013 Adafruit Industries
-All rights reserved.
+Copyright (c) 2015 Adafruit Industries, All rights reserved.
 
-TrinketHidCombo is free software: you can redistribute it and/or modify
-it under the terms of the GNU Lesser General Public License as
-published by the Free Software Foundation, either version 3 of
-the License, or (at your option) any later version.
+ProTrinketHidCombo is free software: you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
-TrinketHidCombo is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU Lesser General Public License for more details.
+ProTrinketHidCombo is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public License for more details.
 
 You should have received a copy of the GNU Lesser General Public
-License along with TrinketHidCombo. If not, see
+License along with ProTrinketHidCombo. If not, see
 <http://www.gnu.org/licenses/>.
 */
 
-#ifndef _TRINKETHIDCOMBO_H_
-#define _TRINKETHIDCOMBO_H_
+#ifndef _PROTRINKETHIDCOMBO_H_
+#define _PROTRINKETHIDCOMBO_H_
 
 #include <stdint.h>
 #include <Print.h>

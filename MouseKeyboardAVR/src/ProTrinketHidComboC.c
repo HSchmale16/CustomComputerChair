@@ -1,27 +1,20 @@
 /*
-This is the part of the TrinketHidCombo code that is usually written in C
-I didn't want to mix it with the object oriented C++ code
+This is the part of the ProTrinketHidCombo code that is usually written in C so nott to mix it with the object oriented C++ code
 
-Copyright (c) 2013 Adafruit Industries
+Copyright (c) 2015 Adafruit Industries
 All rights reserved.
 
-TrinketHidCombo is free software: you can redistribute it and/or modify
-it under the terms of the GNU Lesser General Public License as
-published by the Free Software Foundation, either version 3 of
-the License, or (at your option) any later version.
+ProTrinketHidCombo is free software: you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
-TrinketHidCombo is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU Lesser General Public License for more details.
+ProTrinketHidCombo is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public License for more details.
 
 You should have received a copy of the GNU Lesser General Public
-License along with TrinketHidCombo. If not, see
+License along with ProTrinketHidCombo. If not, see
 <http://www.gnu.org/licenses/>.
 */
 
 //#include "cmdline_defs.h"
-#include "../include/TrinketHidComboC.h"
+#include "../include/ProTrinketHidComboC.h"
 #include "../include/usbconfig.h"
 #include "../usbdrv/usbdrv.h"
 #include <avr/pgmspace.h>
@@ -31,10 +24,10 @@ License along with TrinketHidCombo. If not, see
 #include <stdint.h>
 
 uint8_t report_buffer[8];
-char usb_hasCommed = 0;
+char    usb_hasCommed = 0;
 uint8_t idle_rate = 500 / 4;  // see HID1_11.pdf sect 7.2.4
 uint8_t protocol_version = 0; // see HID1_11.pdf sect 7.2.6
-uint8_t led_state = 0; // caps/num/scroll lock LEDs
+uint8_t led_state = 0;        // caps/num/scroll lock LEDs
 
 void usbBegin()
 {

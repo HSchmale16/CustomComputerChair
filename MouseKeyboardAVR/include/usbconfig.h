@@ -8,44 +8,36 @@
  */
 
 /*
-This file has been modified for use as a part of TrinketHidCombo
+This file has been modified for use as a part of ProTrinketHidCombo
 
-Copyright (c) 2013 Adafruit Industries
+Copyright (c) 2015 Adafruit Industries
 All rights reserved.
 
-TrinketHidCombo is free software: you can redistribute it and/or modify
-it under the terms of the GNU Lesser General Public License as
-published by the Free Software Foundation, either version 3 of
-the License, or (at your option) any later version.
+ProTrinketHidCombo is free software: you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
-TrinketHidCombo is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU Lesser General Public License for more details.
+ProTrinketHidCombo is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public License for more details.
 
 You should have received a copy of the GNU Lesser General Public
-License along with TrinketHidCombo. If not, see
+License along with ProTrinketHidCombo. If not, see
 <http://www.gnu.org/licenses/>.
 */
 
 //#include "cmdline_defs.h"
 
-
-
 #ifndef __usbconfig_h_included__
 #define __usbconfig_h_included__
 
-/* ---------------------------- Hardware Config ---------------------------- */
+/* -------------- Hardware Config ---------------------------- */
 
-#define USB_CFG_IOPORTNAME      B
+#define USB_CFG_IOPORTNAME      D
 /* This is the port where the USB bus is connected. When you configure it to
  * "B", the registers PORTB, PINB and DDRB will be used.
  */
-#define USB_CFG_DMINUS_BIT      3
+#define USB_CFG_DMINUS_BIT      7
 /* This is the bit number in USB_CFG_IOPORT where the USB D- line is connected.
  * This may be any bit in the port.
  */
-#define USB_CFG_DPLUS_BIT       4
+#define USB_CFG_DPLUS_BIT       2
 /* This is the bit number in USB_CFG_IOPORT where the USB D+ line is connected.
  * This may be any bit in the port. Please note that D+ must also be connected
  * to interrupt pin INT0! [You can also use other interrupts, see section
@@ -55,23 +47,22 @@ License along with TrinketHidCombo. If not, see
  * markers every millisecond.]
  */
 #define USB_CFG_CLOCK_KHZ       (F_CPU/1000)
-/* Clock rate of the AVR in kHz. Legal values are 12000, 12800, 15000, 16000,
- * 16500, 18000 and 20000. The 12.8 MHz and 16.5 MHz versions of the code
- * require no crystal, they tolerate +/- 1% deviation from the nominal
- * frequency. All other rates require a precision of 2000 ppm and thus a
- * crystal!
- * Since F_CPU should be defined to your actual clock rate anyway, you should
- * not need to modify this setting.
+#if USB_CFG_CLOCK_KHZ != 12000 && USB_CFG_CLOCK_KHZ != 16000
+#  error "Non-standard clock rate for a Pro Trinket detected"
+#endif
+/* Clock rate of the AVR in kHz. Legal values are 12000 and 16000
+ * for Pro Trinket.  Since F_CPU should be defined to your actual
+ * clock rate anyway, you should not need to modify this setting.
  */
 #define USB_CFG_CHECK_CRC       0
-/* Define this to 1 if you want that the driver checks integrity of incoming
- * data packets (CRC checks). CRC checks cost quite a bit of code size and are
- * currently only available for 18 MHz crystal clock. You must choose
- * USB_CFG_CLOCK_KHZ = 18000 if you enable this option.
+/* Define this to 1 if you want that the driver checks integrity
+ * of incoming data packets (CRC checks). CRC checks cost quite a
+ * bit of code size and are currently only available for 18 MHz
+ * crystal clock. You must choose USB_CFG_CLOCK_KHZ = 18000 if
+ * you enable this option (not available for Pro Trinket).
  */
 
-/* ----------------------- Optional Hardware Config ------------------------ */
-
+/* ------Optional Hardware Config ------------------------ */
 /* #define USB_CFG_PULLUP_IOPORTNAME   D */
 /* If you connect the 1.5k pullup resistor from D- to a port pin instead of
  * V+, you can connect and disconnect the device from firmware by calling
@@ -84,7 +75,7 @@ License along with TrinketHidCombo. If not, see
  * above for details.
  */
 
-/* --------------------------- Functional Range ---------------------------- */
+/* --------- Functional Range ---------------------------- */
 
 #define USB_CFG_HAVE_INTRIN_ENDPOINT    1
 /* Define this to 1 if you want to compile a version with two endpoints: The
@@ -130,7 +121,7 @@ License along with TrinketHidCombo. If not, see
 /* Define this to 1 if the device has its own power supply. Set it to 0 if the
  * device is powered from the USB bus.
  */
-#define USB_CFG_MAX_BUS_POWER           100
+#define USB_CFG_MAX_BUS_POWER           200
 /* Set this variable to the maximum USB bus power consumption of your device.
  * The value is in milliamperes. [It will be divided by two since USB
  * communicates power requirements in units of 2 mA.]
@@ -219,7 +210,7 @@ License along with TrinketHidCombo. If not, see
 /* define this macro to 1 if you want the function usbMeasureFrameLength()
  * compiled in. This function can be used to calibrate the AVR's RC oscillator.
  */
- #if defined(__AVR_ATtiny85__) || defined(__AVR_ATtiny45__) || defined(__AVR_ATtiny25__)
+#if defined(__AVR_ATtiny85__) || defined(__AVR_ATtiny45__) || defined(__AVR_ATtiny25__)
 #ifndef __ASSEMBLER__
 #include <avr/interrupt.h>  // for sei()
 extern void calibrateOscillator(void);
@@ -236,7 +227,7 @@ extern void calibrateOscillator(void);
  * run the AVR close to its limit.
  */
 
-/* -------------------------- Device Description --------------------------- */
+/* ----------- Device Description --------------------------- */
 
 #define  USB_CFG_VENDOR_ID       0x81, 0x17
 /* USB vendor ID for the device, low byte first. If you have registered your
@@ -267,8 +258,8 @@ extern void calibrateOscillator(void);
  * obdev's free shared VID/PID pair. See the file USB-IDs-for-free.txt for
  * details.
  */
-#define USB_CFG_DEVICE_NAME     'T', 'r', 'i', 'n', 'k', 'e', 't', ' ', 'H', 'I', 'D', ' ', 'C', 'o', 'm', 'b', 'o',
-#define USB_CFG_DEVICE_NAME_LEN 17
+#define USB_CFG_DEVICE_NAME   'P','r','o',' ',  'T', 'r', 'i', 'n', 'k', 'e', 't', ' ', 'H', 'I', 'D', ' ', 'C', 'o', 'm', 'b', 'o',
+#define USB_CFG_DEVICE_NAME_LEN 21
 /* Same as above for the device name. If you don't want a device name, undefine
  * the macros. See the file USB-IDs-for-free.txt before you assign a name if
  * you use a shared VID/PID.
@@ -386,13 +377,16 @@ extern void calibrateOscillator(void);
  * which is not fully supported (such as IAR C) or if you use a differnt
  * interrupt than INT0, you may have to define some of these.
  */
-//#define USB_INTR_CFG            PCMSK
-//#define USB_INTR_CFG_SET        (1 << USB_CFG_DPLUS_BIT)
-//#define USB_INTR_CFG_CLR        0
-//#define USB_INTR_ENABLE         GIMSK
-//#define USB_INTR_ENABLE_BIT     PCIE
-//#define USB_INTR_PENDING        GIFR
-//#define USB_INTR_PENDING_BIT    PCIF
-//#define USB_INTR_VECTOR         PCINT0_vect
+/* ones below are for Trinket, Pro Trinket can use V-USB values
+ * #define USB_INTR_CFG            PCMSK
+ * #define USB_INTR_CFG_SET        (1 << USB_CFG_DPLUS_BIT)
+ * #define USB_INTR_CFG_CLR        0
+ * #define USB_INTR_ENABLE         GIMSK
+ * #define USB_INTR_ENABLE_BIT     PCIE
+ * #define USB_INTR_PENDING        GIFR
+ * #define USB_INTR_PENDING_BIT    PCIF
+*/
+/* Interrupt vector for Pro Trinket's ATmega 328 */
+#define USB_INTR_VECTOR         INT0_vect
 
 #endif /* __usbconfig_h_included__ */

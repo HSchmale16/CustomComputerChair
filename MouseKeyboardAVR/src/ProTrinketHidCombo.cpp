@@ -1,28 +1,22 @@
 /*
-This is the part of the TrinketHidCombo code that is exposed to the user
+This is the part of the ProTrinketHidCombo code that is exposed to the user
 See the header file for more comments on the functions
 
-Copyright (c) 2013 Adafruit Industries
+Copyright (c) 2015 Adafruit Industries
 All rights reserved.
 
-TrinketHidCombo is free software: you can redistribute it and/or modify
-it under the terms of the GNU Lesser General Public License as
-published by the Free Software Foundation, either version 3 of
-the License, or (at your option) any later version.
+ProTrinketHidCombo is free software: you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
-TrinketHidCombo is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU Lesser General Public License for more details.
+ProTrinketHidCombo is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Lesser General Public License for more details.
 
 You should have received a copy of the GNU Lesser General Public
-License along with TrinketHidCombo. If not, see
+License along with ProTrinketHidCombo. If not, see
 <http://www.gnu.org/licenses/>.
 */
 
-// #include "cmdline_defs.h"
-#include "../include/TrinketHidCombo.h"
-#include "../include/TrinketHidComboC.h"
+//#include "cmdline_defs.h"
+#include "../include/ProTrinketHidCombo.h"
+#include "../include/ProTrinketHidComboC.h"
 
 #include <stdint.h>
 #include <avr/interrupt.h>
