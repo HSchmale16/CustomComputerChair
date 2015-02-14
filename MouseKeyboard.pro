@@ -1,4 +1,4 @@
-update=Fri 13 Feb 2015 09:22:03 PM EST
+update=Sat 14 Feb 2015 12:38:25 AM EST
 last_client=kicad
 [eeschema]
 version=1
@@ -45,5 +45,27 @@ LibName30=valves
 LibName31=arduino_shieldsNCL
 LibName32=con-usb-2
 LibName33=2axispotwselect
+[pcbnew]
+version=1
+PageLayoutDescrFile=
+LastNetListRead=
+UseCmpFile=1
+PadDrill=0.6
+PadDrillOvalY=0.6
+PadSizeH=1.5
+PadSizeV=1.5
+PcbTextSizeV=1.5
+PcbTextSizeH=1.5
+PcbTextThickness=0.3
+ModuleTextSizeV=1
+ModuleTextSizeH=1
+ModuleTextSizeThickness=0.15
+SolderMaskClearance=0
+SolderMaskMinWidth=0
+DrawSegmentWidth=0.2
+BoardOutlineThickness=0.09999999999999999
+ModuleOutlineThickness=0.15
+[pcbnew/libraries]
+LibDir=
 [general]
 version=1
