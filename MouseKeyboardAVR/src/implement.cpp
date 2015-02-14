@@ -11,6 +11,7 @@
 
 int km::initKM()
 {
+    Serial.begin(9600);
     pinMode(KEY0_SW, INPUT);
     pinMode(KEY1_SW, INPUT);
     pinMode(KEY2_SW, INPUT);
@@ -27,5 +28,12 @@ int km::initKM()
 
 int km::runKM()
 {
+    Serial.print("Vx = ");
+    Serial.print(analogRead(VRX_PIN));
+    Serial.print("\t\tVy = ");
+    Serial.print(analogRead(VRY_PIN));
+    Serial.print("\t\tSwitchState = ");
+    Serial.println(digitalRead(LEFT_MOUSE_BTN));
+    delay(50);
     return 0;
 }
