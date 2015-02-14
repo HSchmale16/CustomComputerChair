@@ -19,4 +19,5 @@ void loop(){
   Serial.print(analogRead(A4));
   Serial.print("\t\tSwitchState = ");
   Serial.println(digitalRead(A5));
+  delayMicroseconds(50);
 }

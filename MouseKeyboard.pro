@@ -1,5 +1,5 @@
-update=Sat 14 Feb 2015 11:06:09 AM EST
-last_client=kicad
+update=Sat 14 Feb 2015 11:31:35 AM EST
+last_client=eeschema
 [pcbnew]
 version=1
 PageLayoutDescrFile=
@@ -22,6 +22,8 @@ BoardOutlineThickness=0.09999999999999999
 ModuleOutlineThickness=0.15
 [pcbnew/libraries]
 LibDir=
+[general]
+version=1
 [eeschema]
 version=1
 PageLayoutDescrFile=
@@ -67,5 +69,3 @@ LibName30=valves
 LibName31=arduino_shieldsNCL
 LibName32=con-usb-2
 LibName33=2axispotwselect
-[general]
-version=1
