@@ -7,13 +7,20 @@
  * \date 11 February 2015
  */
 
+ #include <Arduino.h>        // For arduino pin constants
+
 // ===== Pin Constants ======
-const int BUTTON_0 = 3;     //!< SW_1
-const int BUTTON_1 = 4;     //!< SW_2
-const int BUTTON_2 = 5;     //!< SW_3
-const int BUTTON_3 = 6;     //!< SW_4
-const int BUTTON_4 = 8;     //!< SW_5
-const int BUTTON_5 = 9;     //!< SW_6
-const int SPACE_ENTER = 10; //!< SW_7
+const int LEFT_MOUSE_BTN = 3;
+const int CON_TOGGLE_SW = 12;
+const int KEY0_SW = 4;
+const int KEY1_SW = 5;
+const int KEY2_SW = 6;
+const int KEY3_SW = 7;
+const int KEY4_SW = 8;
+const int KEY5_SW = 9;
+const int KEY6_SW = 10;
+const int KEY7_SW = 11;
+const int VRX_PIN = A0;
+const int VRY_PIN = A1;
 
 #endif // CONSTANTS_H_INCLUDED

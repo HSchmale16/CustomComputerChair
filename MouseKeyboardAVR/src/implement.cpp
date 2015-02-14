@@ -11,6 +11,16 @@
 
 int km::initKM()
 {
+    pinMode(KEY0_SW, INPUT);
+    pinMode(KEY1_SW, INPUT);
+    pinMode(KEY2_SW, INPUT);
+    pinMode(KEY3_SW, INPUT);
+    pinMode(KEY4_SW, INPUT);
+    pinMode(KEY5_SW, INPUT);
+    pinMode(KEY6_SW, INPUT);
+    pinMode(KEY7_SW, INPUT);
+    pinMode(LEFT_MOUSE_BTN, INPUT_PULLUP);
+    pinMode(CON_TOGGLE_SW, INPUT);
     return 0;
 }
 

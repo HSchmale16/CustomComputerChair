@@ -5,9 +5,9 @@
 
 void setup(){
   Serial.begin(115200);
-  pinMode(A1, OUTPUT);
-  pinMode(A2, OUTPUT);
-  pinMode(A5, INPUT_PULLUP);
+  pinMode(14, OUTPUT);
+  pinMode(15, OUTPUT);
+  pinMode(20, INPUT_PULLUP);
   digitalWrite(A1, LOW);
   digitalWrite(A2, HIGH);
 }
