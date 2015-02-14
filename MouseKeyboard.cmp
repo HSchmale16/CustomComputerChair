@@ -1,31 +1,24 @@
-Cmp-Mod V01 Created by CvPcb (2014-jan-25)-product date = Fri 13 Feb 2015 03:26:10 PM EST
+Cmp-Mod V01 Created by CvPcb (2014-jan-25)-product date = Fri 13 Feb 2015 06:35:27 PM EST
 
 BeginCmp
 TimeStamp = /54DD5892;
 Reference = D1;
 ValeurCmp = DIODESCH;
-IdModule  = ;
+IdModule  = Discret:D3;
 EndCmp
 
 BeginCmp
 TimeStamp = /54DD58BD;
 Reference = D2;
 ValeurCmp = DIODESCH;
-IdModule  = ;
-EndCmp
-
-BeginCmp
-TimeStamp = /54DAB305;
-Reference = IC1;
-ValeurCmp = ATMEGA328P-P;
-IdModule  = Sockets_DIP:DIP-28__300;
+IdModule  = Discret:D3;
 EndCmp
 
 BeginCmp
 TimeStamp = /54DD5132;
 Reference = J1;
 ValeurCmp = USB;
-IdModule  = ;
+IdModule  = Connect:USB_B;
 EndCmp
 
 BeginCmp
@@ -50,66 +43,73 @@ IdModule  = Discret:R1;
 EndCmp
 
 BeginCmp
-TimeStamp = /54DAA84B;
-Reference = RV1;
-ValeurCmp = POT;
+TimeStamp = /54DE7BC9;
+Reference = SHIELD1;
+ValeurCmp = ARDUINO_SHIELD;
 IdModule  = ;
 EndCmp
 
 BeginCmp
-TimeStamp = /54DAA85F;
-Reference = RV2;
-ValeurCmp = POT;
-IdModule  = ;
-EndCmp
-
-BeginCmp
-TimeStamp = /54DAA625;
+TimeStamp = /54DE8AA7;
 Reference = SW1;
-ValeurCmp = SW_PUSH;
-IdModule  = ;
+ValeurCmp = SPST;
+IdModule  = Terminal_Blocks:TerminalBlock_WAGO-236_2Stift_RM5mm_1pol;
 EndCmp
 
 BeginCmp
-TimeStamp = /54DAA6B1;
+TimeStamp = /54DE840F;
 Reference = SW2;
 ValeurCmp = SW_PUSH;
-IdModule  = ;
+IdModule  = Terminal_Blocks:TerminalBlock_WAGO-236_2Stift_RM5mm_1pol;
 EndCmp
 
 BeginCmp
-TimeStamp = /54DAA639;
+TimeStamp = /54DE8423;
 Reference = SW3;
 ValeurCmp = SW_PUSH;
-IdModule  = ;
+IdModule  = Terminal_Blocks:TerminalBlock_WAGO-236_2Stift_RM5mm_1pol;
 EndCmp
 
 BeginCmp
-TimeStamp = /54DAA64D;
+TimeStamp = /54DE8437;
 Reference = SW4;
 ValeurCmp = SW_PUSH;
-IdModule  = ;
+IdModule  = Terminal_Blocks:TerminalBlock_WAGO-236_2Stift_RM5mm_1pol;
 EndCmp
 
 BeginCmp
-TimeStamp = /54DAA661;
+TimeStamp = /54DE8557;
 Reference = SW5;
 ValeurCmp = SW_PUSH;
-IdModule  = ;
+IdModule  = Terminal_Blocks:TerminalBlock_WAGO-236_2Stift_RM5mm_1pol;
 EndCmp
 
 BeginCmp
-TimeStamp = /54DAA675;
+TimeStamp = /54DE856B;
 Reference = SW6;
 ValeurCmp = SW_PUSH;
-IdModule  = ;
+IdModule  = Terminal_Blocks:TerminalBlock_WAGO-236_2Stift_RM5mm_1pol;
 EndCmp
 
 BeginCmp
-TimeStamp = /54DAA69D;
+TimeStamp = /54DE857F;
 Reference = SW7;
 ValeurCmp = SW_PUSH;
-IdModule  = ;
+IdModule  = Terminal_Blocks:TerminalBlock_WAGO-236_2Stift_RM5mm_1pol;
+EndCmp
+
+BeginCmp
+TimeStamp = /54DE8593;
+Reference = SW8;
+ValeurCmp = SW_PUSH;
+IdModule  = Terminal_Blocks:TerminalBlock_WAGO-236_2Stift_RM5mm_1pol;
+EndCmp
+
+BeginCmp
+TimeStamp = /54DE819B;
+Reference = U1;
+ValeurCmp = 2AxisPotWSelect;
+IdModule  = Terminal_Blocks:TerminalBlock_WAGO-236_2Stift_RM5mm_3pol;
 EndCmp
 
 EndListe

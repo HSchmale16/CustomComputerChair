@@ -1,7 +1,5 @@
-update=Fri 13 Feb 2015 05:58:19 PM EST
-last_client=eeschema
-[general]
-version=1
+update=Fri 13 Feb 2015 07:51:51 PM EST
+last_client=kicad
 [eeschema]
 version=1
 PageLayoutDescrFile=
@@ -47,3 +45,5 @@ LibName30=valves
 LibName31=arduino_shieldsNCL
 LibName32=con-usb-2
 LibName33=2axispotwselect
+[general]
+version=1
