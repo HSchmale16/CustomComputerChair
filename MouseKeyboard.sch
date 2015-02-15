@@ -38,11 +38,11 @@ EELAYER END
 $Descr USLetter 11000 8500
 encoding utf-8
 Sheet 1 1
-Title "noname.sch"
-Date ""
+Title "MouseKeyboard.sch"
+Date "15 Feb 2015"
 Rev ""
 Comp ""
-Comment1 ""
+Comment1 "A Mouse & Keyboard For A Disabled Person or a Power User"
 Comment2 ""
 Comment3 ""
 Comment4 ""
