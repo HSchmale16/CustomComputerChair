@@ -9,6 +9,10 @@
 #include <Arduino.h>                       //!< Nice Library, Easy to use
 
 
+// Declare Globals
+bool b_LMouseBtnClked; //!< Is the joystick button pressed, LEFT MOUSE
+char c_BtnsPressed;    //!< Bit Banged Keys Test
+
 int km::initKM()
 {
     Serial.begin(9600);
@@ -28,12 +32,5 @@ int km::initKM()
 
 int km::runKM()
 {
-    Serial.print("Vx = ");
-    Serial.print(analogRead(VRX_PIN));
-    Serial.print("\t\tVy = ");
-    Serial.print(analogRead(VRY_PIN));
-    Serial.print("\t\tSwitchState = ");
-    Serial.println(digitalRead(LEFT_MOUSE_BTN));
-    delay(50);
     return 0;
 }
