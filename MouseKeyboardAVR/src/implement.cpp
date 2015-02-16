@@ -11,7 +11,7 @@
 
 // Declare Globals
 bool b_LMouseBtnClked; //!< Is the joystick button pressed, LEFT MOUSE
-char c_BtnsPressed;    //!< Bit Banged Keys Test
+char c_BtnsPressed;    //!< Bit Banged Keys Test, only 8 bits are needed
 
 int km::initKM()
 {
