@@ -13,14 +13,14 @@
 // ===== Pin Constants ======
 const int LEFT_MOUSE_BTN = 3;
 const int CON_TOGGLE_SW = 12;
-const int KEY0_SW = 4;
-const int KEY1_SW = 5;
-const int KEY2_SW = 6;
-const int KEY3_SW = 7;
-const int KEY4_SW = 8;
-const int KEY5_SW = 9;
-const int KEY6_SW = 10;
-const int KEY7_SW = 11;
+const int KEY0_SW = 4;        //!< Keyboard Switch 0
+const int KEY1_SW = 5;        //!< Keyboard Switch 1
+const int KEY2_SW = 6;        //!< Keyboard Switch 2
+const int KEY3_SW = 7;        //!< Keyboard Switch 3
+const int KEY4_SW = 8;        //!< Keyboard Switch 4
+const int KEY5_SW = 9;        //!< Keyboard Switch 5
+const int KEY6_SW = 10;       //!< Keyboard Switch 6
+const int KEY7_SW = 11;       //!< Keyboard Enter Button
 const int VRX_PIN = A0;
 const int VRY_PIN = A1;
 
