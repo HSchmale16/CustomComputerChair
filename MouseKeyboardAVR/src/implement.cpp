@@ -12,6 +12,10 @@
 // Declare Globals
 bool b_LMouseBtnClked; //!< Is the joystick button pressed, LEFT MOUSE
 char c_BtnsPressed;    //!< Bit Banged Keys Test, only 8 bits are needed
+int n_MouseVx;         //!< Mouse Vx Speed
+int n_MouseVy;         //!< Mouse Vy Speed
+int n_initMouseVx;     //!< Initial Mouse Vx Speed
+int n_initMouseVy;     //!< Initial Mouse Vy Speed
 
 int km::initKM()
 {
@@ -26,6 +30,8 @@ int km::initKM()
     }
 
     // init Globals
+    n_initMouseVx = analogRead(VRX_PIN);
+    n_initMouseVy = analogRead(VRY_PIN);
     b_LMouseBtnClked = false;
     c_BtnsPressed = 0;
     return 0;
@@ -35,6 +41,9 @@ int km::initKM()
 int km::runKM()
 {
     int i; // loop counter
+    // Update Values
+    n_MouseVx = analogRead(VRX_PIN);
+    n_MouseVy = analogRead(VRY_PIN);
     // invert the value as an inputpullup is inverted
     b_LMouseBtnClked = !digitalRead(LEFT_MOUSE_BTN_PIN);
     for(i = 0; i < KEYS_TO_TEST; i++)
@@ -48,6 +57,9 @@ int km::runKM()
             c_BtnsPressed &= BIT_FLAGS[i];
         }
     }
+
+    // Do stuff with the data, move mouse send keystrokes
+
     delay(10);
     return 0;
 }
