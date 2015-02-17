@@ -16,21 +16,38 @@ char c_BtnsPressed;    //!< Bit Banged Keys Test, only 8 bits are needed
 int km::initKM()
 {
     Serial.begin(9600);
-    pinMode(KEY0_SW, INPUT);
-    pinMode(KEY1_SW, INPUT);
-    pinMode(KEY2_SW, INPUT);
-    pinMode(KEY3_SW, INPUT);
-    pinMode(KEY4_SW, INPUT);
-    pinMode(KEY5_SW, INPUT);
-    pinMode(KEY6_SW, INPUT);
-    pinMode(KEY7_SW, INPUT);
-    pinMode(LEFT_MOUSE_BTN, INPUT_PULLUP);
+    // init Pins
+    pinMode(LEFT_MOUSE_BTN_PIN, INPUT_PULLUP);
     pinMode(CON_TOGGLE_SW, INPUT);
+    for(int i = 0; i < KEYS_TO_TEST; i++)
+    {
+        pinMode(KEY_TEST_ARRAY[i], INPUT_PULLUP);
+        digitalWrite(KEY_TEST_ARRAY[i], LOW);
+    }
+
+    // init Globals
+    b_LMouseBtnClked = false;
+    c_BtnsPressed = 0;
     return 0;
 }
 
 
 int km::runKM()
 {
+    int i; // loop counter
+    // invert the value as an inputpullup is inverted
+    b_LMouseBtnClked = !digitalRead(LEFT_MOUSE_BTN_PIN);
+    for(i = 0; i < KEYS_TO_TEST; i++)
+    {
+        if(digitalRead(KEY_TEST_ARRAY[i]) == HIGH)
+        {
+            c_BtnsPressed |= BIT_FLAGS[i];
+        }
+        else
+        {
+            c_BtnsPressed &= BIT_FLAGS[i];
+        }
+    }
+    delay(10);
     return 0;
 }
