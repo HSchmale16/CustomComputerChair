@@ -5,7 +5,7 @@
     (no_connects 0)
     (area 95.25 81.28 180.34 132.08)
     (thickness 1.6)
-    (drawings 7)
+    (drawings 8)
     (tracks 226)
     (zones 0)
     (modules 20)
@@ -844,6 +844,9 @@
       (net 3 XTAL2))
   )
 
+  (gr_text "+ G X Y S\n" (at 113.03 120.65) (layer F.SilkS)
+    (effects (font (size 1.5 1.5) (thickness 0.3)) (justify left))
+  )
   (dimension 83.82 (width 0.3) (layer Dwgs.User)
     (gr_text "83.820 mm" (at 140.97 141.05) (layer Dwgs.User)
       (effects (font (size 1.5 1.5) (thickness 0.3)))
